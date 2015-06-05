@@ -1,0 +1,6 @@
+/*
+
+Put your shell script with all the options in "/etc/profile.d/" --> This will modify the properties upon login. 
+BBBCameraSettings.sh is the file used currently
+
+*/

@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+echo Modifying camera properties upon startup..
+v4l2-ctl --set-fmt-video=width=176.hieght=144,pixelformat=1
+v4l2-ctl --set-ctrl=focus_auto=0
+echo Auto focus turned off
+echo Type "v4l2-ctl -h" for help
+echo ...
+echo Enabling serial communication
+echo enable-uart5 > /sys/devices/bone_capemgr.*/slots
+echo ...
+

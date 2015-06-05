@@ -1,0 +1,29 @@
+
+
+
+
+/******************************************************************/
+Serial Communication steps
+/*
+Follow this. 
+http://hipstercircuits.com/enable-serialuarttty-on-beaglebone-black/
+
+And every time the power is switched off and on or the 
+connection is reset, do 
+echo enable-uart5 > /sys/devices/bone_capemgr.*/slots
+ttyO4 will be visible and P9_11 and P9_13 can be used for Rx 
+and Tx. 
+Put this in a script which can run at startup. 
+
+Make sure the serial connection properties match of both 
+transmitter and receiver.
+
+minicom -s 
+will start the minicom program. change the serial 
+communication settings to match the baud rate, parity, flow 
+control etc. 
+
+can turn on the capture for minicom and the data will be saved 
+in minicom.cap in the same directory where you ran the minicom 
+application from.  
+*/
